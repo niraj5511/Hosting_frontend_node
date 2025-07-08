@@ -14,7 +14,7 @@
   </body>
 
   <script>
-    fetch("https://hosting-backend-node.onrender.com/")
+    fetch("https://hosting-backend-node.onrender.com/quote")
       .then((res) => res.json())
       .then((data) => {
         for (let i = 0; i < data.length; i++) {
@@ -27,7 +27,7 @@
       });
 
     function deleteQuote(id) {
-      fetch(`https://hosting-backend-node.onrender.com/${id}`, {
+      fetch(`https://hosting-backend-node.onrender.com/quote/${id}`, {
         method: "DELETE",
       })
         .then((res) => res.json())
